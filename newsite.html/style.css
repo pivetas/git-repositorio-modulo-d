@@ -1,0 +1,142 @@
+body {
+    background-color: #000000;
+    color: #eaeaea;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+img {
+    border-radius: 12px;
+    border: 3px solid #ff69b4;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+img:hover {
+    transform: scale(1.08) rotate(1deg);
+}
+
+.egirls {
+    background: #000000;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(93, 0, 102, 1) 50%, rgb(97, 5, 120) 80%, rgb(0, 0, 0) 100%);
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.teste {
+    color: #ebbfd5;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.linha {
+    border: none;
+    height: 4px;
+    background: linear-gradient(to right, #ff69b4, #ff1493);
+    margin: 20px 0;
+    border-radius: 2px;
+}
+
+.harajukucolor {
+    background: #000000;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(99, 37, 70, 1) 20%, rgba(184, 24, 24, 1) 50%, rgba(252, 113, 52, 1) 70%, rgba(0, 0, 0, 1) 100%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rodape {
+    line-height: 1.0;
+    background-color: #000000ac;
+    color: #eaeaea;
+    text-align: justify;
+    padding: 10px 0;
+    border-top: 2px solid #000000;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rodape a {
+    color: #ff69b4;
+    text-decoration: none;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.ed {
+    color: #f5007b;
+    font-size: 18px;
+
+}
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card2 img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+
+
+.galeria2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #000000;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+}
+
+.menu a {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #ff1493;
+}
