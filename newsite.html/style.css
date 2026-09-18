@@ -169,24 +169,6 @@ img:hover {
     font-family: 'Orbitron', sans-serif;
 }
 
-
-
-    .menu {
-        gap: 15px;
-        font-size: 14px;
-    }
-
-    h1 {
-        font-size: 26px;
-        padding: 0 10px;
-    }
-
-    .backtotop img {
-        height: 45px;
-        bottom: 15px;
-        right: 15px;
-    }
-}
 .tabela-estilos {
     width: 100%;
     max-width: 900px;
@@ -194,19 +176,37 @@ img:hover {
     border-collapse: collapse;
     background: #0d0d0d;
 }
-.tabela-estilos th, .tabela-estilos td {
+
+.tabela-estilos th,
+.tabela-estilos td {
     border: 1px solid #ff69b4;
     padding: 12px;
     text-align: center;
 }
+
 .tabela-estilos th {
     background: #ff1493;
     color: #000;
     font-weight: 900;
 }
+
 .tabela-estilos tr:nth-child(even) {
     background: #1a1a1a;
 }
+
+/* wrapper da tabela: permite rolagem horizontal no celular sem quebrar o layout */
+.tabela-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.tabela-wrap .tabela-estilos {
+    margin: 20px auto;
+}
+
 .grid-mural {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -214,17 +214,21 @@ img:hover {
     gap: 12px;
     padding: 0 15px;
 }
+
 .grid-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.grid-item.tall { grid-row: span 2; }
-.grid-item.wide { grid-column: span 2; }
 
-@media (max-width: 600px) {
-    .grid-mural { grid-template-columns: repeat(2, 1fr); }
+.grid-item.tall {
+    grid-row: span 2;
 }
+
+.grid-item.wide {
+    grid-column: span 2;
+}
+
 .grid-info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -253,8 +257,150 @@ img:hover {
     color: #d8d8d8;
 }
 
-@media (max-width: 600px) {
+/* ============================= */
+/* RESPONSIVO — TABLET (iPad)    */
+/* ============================= */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 30px;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    .galeria img,
+    .card2 img,
+    .card3 img {
+        width: 260px;
+    }
+
+    .grid-mural {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ============================= */
+/* RESPONSIVO — TABLET PEQUENO / IPAD PORTRAIT */
+/* ============================= */
+@media (max-width: 768px) {
+    .menu {
+        gap: 15px;
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    h1 {
+        font-size: 26px;
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .backtotop img {
+        height: 45px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .galeria,
+    .galeria2,
+    .galeria3 {
+        gap: 14px;
+    }
+
+    .card img {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .card2 img,
+    .card3 img {
+        width: 220px;
+    }
+
+    .grid-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-mural {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================= */
+/* RESPONSIVO — IPHONE / CELULAR */
+/* ============================= */
+@media (max-width: 480px) {
+    .menu {
+        gap: 10px;
+        font-size: 13px;
+        padding: 8px 0;
+    }
+
+    h1 {
+        font-size: 20px;
+        padding: 0 8px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    h4,
+    h5,
+    h6 {
+        font-size: 14px;
+        padding: 0 8px;
+    }
+
+    .teste,
+    .rodape {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .galeria,
+    .galeria2,
+    .galeria3 {
+        gap: 10px;
+        padding: 0 8px;
+    }
+
+    .card2 img,
+    .card3 img {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .card3 {
+        min-height: unset;
+    }
+
+    .tabela-estilos th,
+    .tabela-estilos td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
     .grid-info {
         grid-template-columns: repeat(1, 1fr);
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    .grid-mural {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 110px;
+        gap: 8px;
+        padding: 0 8px;
+    }
+
+    .backtotop img {
+        height: 40px;
+        bottom: 12px;
+        right: 12px;
     }
 }
